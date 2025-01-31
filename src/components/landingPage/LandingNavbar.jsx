@@ -144,7 +144,7 @@ const LandingNavbar = () => {
 
               {/* Contact Us Button */}
               <li>
-                <a href="#" className="block px-6 py-3 bg-red-500 text-white rounded-md hover:bg-red-600 transition">
+                <a href="/contact" className="block px-6 py-3 bg-red-500 text-white rounded-md hover:bg-red-600 transition">
                   Contact Us
                 </a>
               </li>

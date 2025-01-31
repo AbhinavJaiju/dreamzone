@@ -1,28 +1,64 @@
-import React, { useRef } from 'react';
-import emailjs from '@emailjs/browser';
+import React, { useRef, useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const LandingContactUs = () => {
   const form = useRef();
 
-  const sendEmail = (e) => {
+  // State to store form data
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    email: '',
+    course: '',
+  });
+
+  // Handle input changes
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  // Handle form submission
+  const sendEmail = async (e) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm('service_0aapx05', 'template_q1mxj1c', form.current, {
-        publicKey: '0i1KgGg7cnQPaREia',
-      })
-      .then(
-        () => {
-          toast.success('Your message has been sent successfully!');
-          form.current.reset(); // Clears the form after success
+    const data = {
+      service_id: 'service_0aapx05', // Replace with your service ID
+      template_id: 'template_pml246k', // Replace with your template ID
+      user_id: '0i1KgGg7cnQPaREia', // Replace with your public key
+      template_params: {
+        name: formData.name,
+        phoneNumber: formData.phone,
+        email: formData.email,
+        course: formData.course,
+      },
+    };
+
+    try {
+      const response = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
         },
-        (error) => {
-          toast.error('Failed to send the message, please try again.');
-        }
-      );
-  }; // Added missing closing brace for sendEmail function
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        toast.success('Your message has been sent successfully!');
+        setFormData({ name: '', phone: '', email: '', course: '' }); // Reset form data
+        form.current.reset(); // Reset the form
+      } else {
+        throw new Error('Failed to send the message');
+      }
+    } catch (error) {
+      toast.error('Failed to send the message, please try again.');
+      console.error('Error:', error);
+    }
+  };
 
   return (
     <div className="bg-white w-full flex flex-col justify-center items-center">
@@ -51,16 +87,20 @@ const LandingContactUs = () => {
                 type="text"
                 name="name"
                 placeholder="Enter your name"
+                value={formData.name}
+                onChange={handleInputChange}
                 className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
 
             <div className="flex-1 min-w-[200px]">
-              <label className="block text-gray-700 font-medium mb-1">Phone Number</label>
+              <label className="block text-gray-700 font-medium mb-1">PhoneNumber</label>
               <input
                 type="tel"
                 name="phone"
                 placeholder="Enter your phone number"
+                value={formData.phone}
+                onChange={handleInputChange}
                 className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
@@ -71,6 +111,8 @@ const LandingContactUs = () => {
                 type="email"
                 name="email"
                 placeholder="Enter your email"
+                value={formData.email}
+                onChange={handleInputChange}
                 className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
@@ -79,6 +121,8 @@ const LandingContactUs = () => {
               <label className="block text-gray-700 font-medium mb-1">Select a Course</label>
               <select
                 name="course"
+                value={formData.course}
+                onChange={handleInputChange}
                 className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               >
                 <option value="">Select a Course</option>
