@@ -1,7 +1,7 @@
 import './App.css'
 import HomePage from './pages/HomePage'
 import LandingPage from './pages/LandingPage'
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   
