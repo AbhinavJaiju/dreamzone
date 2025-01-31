@@ -49,7 +49,7 @@ const Events = () => {
       </div>
       <div className="w-full -mt-16"></div>
       <div className="w-full px-4 mx-auto max-w-full sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px]">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
         {/* Image 1 */}
         <div className="flex flex-col items-start mb-5 image-container">
           <div
