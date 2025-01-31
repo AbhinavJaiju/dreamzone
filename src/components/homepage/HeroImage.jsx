@@ -4,61 +4,63 @@ import 'react-toastify/dist/ReactToastify.css';
 import bg from "../../assets/bg.jpg";
 
 const HeroImage = () => {
-   const form = useRef();
+  const form = useRef();
   const [formData, setFormData] = useState({
-      name: '',
-      phone: '',
-      email: '',
-      course: '',
+    name: '',
+    phone: '',
+    email: '',
+    course: '',
+  });
+
+  // Check if all fields are filled
+  const isFormValid = Object.values(formData).every(value => value.trim() !== '');
+
+  // Handle input changes
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
     });
-  
-    // Handle input changes
-    const handleInputChange = (e) => {
-      const { name, value } = e.target;
-      setFormData({
-        ...formData,
-        [name]: value,
-      });
+  };
+
+  // Handle form submission
+  const sendEmail = async (e) => {
+    e.preventDefault();
+
+    const data = {
+      service_id: 'service_0aapx05', // Replace with your service ID
+      template_id: 'template_pml246k', // Replace with your template ID
+      user_id: '0i1KgGg7cnQPaREia', // Replace with your public key
+      template_params: {
+        name: formData.name,
+        phoneNumber: formData.phone,
+        email: formData.email,
+        course: formData.course,
+      },
     };
-  
-    // Handle form submission
-    const sendEmail = async (e) => {
-      e.preventDefault();
-  
-      const data = {
-        service_id: 'service_0aapx05', // Replace with your service ID
-        template_id: 'template_pml246k', // Replace with your template ID
-        user_id: '0i1KgGg7cnQPaREia', // Replace with your public key
-        template_params: {
-          name: formData.name,
-          phoneNumber: formData.phone,
-          email: formData.email,
-          course: formData.course,
+
+    try {
+      const response = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
         },
-      };
-  
-      try {
-        const response = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(data),
-        });
-  
-        if (response.ok) {
-          toast.success('Your message has been sent successfully!');
-          setFormData({ name: '', phone: '', email: '', course: '' }); // Reset form data
-          form.current.reset(); // Reset the form
-        } else {
-          throw new Error('Failed to send the message');
-        }
-      } catch (error) {
-        toast.error('Failed to send the message, please try again.');
-        console.error('Error:', error);
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        toast.success('Your message has been sent successfully!');
+        setFormData({ name: '', phone: '', email: '', course: '' }); // Reset form data
+        form.current.reset(); // Reset the form
+      } else {
+        throw new Error('Failed to send the message');
       }
-    };
-  
+    } catch (error) {
+      toast.error('Failed to send the message, please try again.');
+      console.error('Error:', error);
+    }
+  };
 
   return (
     <div
@@ -129,7 +131,8 @@ const HeroImage = () => {
 
             <button
               type="submit"
-              className="w-full bg-red-500 text-white py-3 rounded-lg font-medium hover:bg-red-600 transition"
+              className={`w-full py-3 rounded-lg font-medium transition mx-auto ${isFormValid ? 'bg-red-500 text-white hover:bg-red-600' : 'bg-gray-300 text-gray-600 cursor-not-allowed'}`}
+              disabled={!isFormValid}
             >
               Submit
             </button>

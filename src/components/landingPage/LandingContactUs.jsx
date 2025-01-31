@@ -13,6 +13,9 @@ const LandingContactUs = () => {
     course: '',
   });
 
+  // Check if all fields are filled
+  const isFormValid = Object.values(formData).every(value => value.trim() !== '');
+
   // Handle input changes
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -75,11 +78,7 @@ const LandingContactUs = () => {
         </span>
       </div>
       <div className="w-full py-6 px-4">
-        <form
-          ref={form}
-          onSubmit={sendEmail}
-          className="bg-white p-6 w-full flex flex-col"
-        >
+        <form ref={form} onSubmit={sendEmail} className="bg-white p-6 w-full flex flex-col">
           <div className="flex flex-wrap gap-4 mb-4">
             <div className="flex-1 min-w-[200px]">
               <label className="block text-gray-700 font-medium mb-1">Name</label>
@@ -135,7 +134,8 @@ const LandingContactUs = () => {
 
           <button
             type="submit"
-            className="w-full bg-red-500 text-white py-3 rounded-lg font-medium hover:bg-red-600 transition mx-auto"
+            className={`w-full py-3 rounded-lg font-medium transition mx-auto ${isFormValid ? 'bg-red-500 text-white hover:bg-red-600' : 'bg-gray-300 text-gray-600 cursor-not-allowed'}`}
+            disabled={!isFormValid}
           >
             Submit
           </button>
