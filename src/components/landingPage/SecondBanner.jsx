@@ -14,14 +14,14 @@ const SecondBanner = () => {
     >
       <div className="w-1/3 flex flex-col space-y-8">
         <motion.div
-          className="w-full h-full bg-cover bg-center rounded-lg shadow-lg"
+          className="w-full h-full bg-contain bg-no-repeat bg-center "
           style={{ backgroundImage: `url(${left1})` }}
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         />
         <motion.div
-          className="w-full h-full bg-cover bg-center rounded-lg shadow-lg"
+          className="w-full h-full bg-contain bg-no-repeat bg-auto bg-center"
           style={{ backgroundImage: `url(${left2})` }}
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
