@@ -12,7 +12,6 @@ const SecondBanner = () => {
       className="min-h-screen flex p-8 overflow-y-auto bg-cover bg-center bg-fixed"
       style={{ backgroundImage: `url(${bg})` }}
     >
-      {/* First Column: Two Images */}
       <div className="w-1/3 flex flex-col space-y-8">
         <motion.div
           className="w-full h-full bg-cover bg-center rounded-lg shadow-lg"
