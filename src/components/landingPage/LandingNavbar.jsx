@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import firstLogo from "../../assets/logo.png";
-import nsdc from "../../assets/nsdc.png";
-import skillIndia from "../../assets/skill-india.png";
 
 const LandingNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,8 +13,6 @@ const LandingNavbar = () => {
         {/* Logo Section */}
         <div className="flex space-x-6 pl-4">
           <img src={firstLogo} alt="Logo 1" className="h-12 w-auto" />
-          <img src={nsdc} alt="Logo 2" className="h-12 w-auto hidden md:block" />
-          <img src={skillIndia} alt="Logo 3" className="h-12 w-auto hidden md:block" />
         </div>
 
         {/* Desktop Navigation */}
@@ -48,21 +44,6 @@ const LandingNavbar = () => {
             </div>
           </li>
 
-          <li>
-            <a href="#" className="px-3 py-2 hover:text-white hover:bg-red-500 rounded-md transition">
-              Gallery
-            </a>
-          </li>
-          <li>
-            <a href="#" className="px-3 py-2 hover:text-white hover:bg-red-500 rounded-md transition">
-              About Us
-            </a>
-          </li>
-          <li>
-            <a href="#" className="px-3 py-2 hover:text-white hover:bg-red-500 rounded-md transition">
-              FAQ
-            </a>
-          </li>
 
           {/* Contact Us Button */}
           <li>
@@ -98,21 +79,6 @@ const LandingNavbar = () => {
               <li>
                 <a href="#" className="block px-3 py-2 hover:text-white hover:bg-red-500 rounded-md transition">
                   Home
-                </a>
-              </li>
-              <li>
-                <a href="#" className="block px-3 py-2 hover:text-white hover:bg-red-500 rounded-md transition">
-                  Gallery
-                </a>
-              </li>
-              <li>
-                <a href="#" className="block px-3 py-2 hover:text-white hover:bg-red-500 rounded-md transition">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="#" className="block px-3 py-2 hover:text-white hover:bg-red-500 rounded-md transition">
-                  FAQ
                 </a>
               </li>
 
