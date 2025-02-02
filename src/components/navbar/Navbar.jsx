@@ -14,7 +14,7 @@ const Navbar = () => {
             className="h-16 sm:h-20 w-auto"
           />
         </div>
-        <div className="w-1/3 sm:w-auto flex justify-center sm:justify-start mb-4 sm:mb-0">
+        {/* <div className="w-1/3 sm:w-auto flex justify-center sm:justify-start mb-4 sm:mb-0">
           <img
             src={nsdc}
             alt="Logo 2"
@@ -27,7 +27,7 @@ const Navbar = () => {
             alt="Logo 3"
             className="h-16 sm:h-20 w-auto"
           />
-        </div>
+        </div> */}
       </div>
     </nav>
   );

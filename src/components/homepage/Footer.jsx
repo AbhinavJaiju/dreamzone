@@ -12,7 +12,7 @@ const Footer = () => {
             DreamZone is a creative skill development initiative of CADD Centre Training Services Private Limited, a diversified global network of creative, engineering, and management skill development institutes.
           </p>
         </div>
-        <div>
+        {/* <div>
           <h3 className="text-lg font-semibold border-b-2 border-red-500 pb-2 mb-4">USEFUL LINKS</h3>
           <ul>
             <li>
@@ -42,7 +42,7 @@ const Footer = () => {
               <a href="#" className="block border-b-2 border-gray-700 pb-2 hover:text-red-500 transition duration-300 mt-2">Animation & Graphics</a>
             </li>
           </ul>
-        </div>
+        </div> */}
         <div>
           <h3 className="text-lg font-semibold border-b-2 border-red-500 pb-2 mb-4">CONTACT US</h3>
           <p className="text-sm mb-2">
