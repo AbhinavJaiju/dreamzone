@@ -13,6 +13,37 @@ const Footer = () => {
           </p>
         </div>
         <div>
+          <h3 className="text-lg font-semibold border-b-2 border-red-500 pb-2 mb-4">USEFUL LINKS</h3>
+          <ul>
+            <li>
+              <a href="/" className="block border-b-2 border-gray-700 pb-2 hover:text-red-500 transition duration-300 mt-2">Home</a>
+            </li>
+            <li>
+              <a href="#" className="block border-b-2 border-gray-700 pb-2 hover:text-red-500 transition duration-300 mt-2">About Us</a>
+            </li>
+            <li>
+              <a href="#" className="block border-b-2 border-gray-700 pb-2 hover:text-red-500 transition duration-300 mt-2">Courses</a>
+            </li>
+            <li>
+              <a href="#" className="block border-b-2 border-gray-700 pb-2 hover:text-red-500 transition duration-300 mt-2">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 className="text-lg font-semibold border-b-2 border-red-500 pb-2 mb-4">MAIN COURSES</h3>
+          <ul>
+            <li>
+              <a href="#" className="block border-b-2 border-gray-700 pb-2 hover:text-red-500 transition duration-300 mt-2">Fashion Design </a>
+            </li>
+            <li>
+              <a href="#" className="block border-b-2 border-gray-700 pb-2 hover:text-red-500 transition duration-300 mt-2">Interior Design</a>
+            </li>
+            <li>
+              <a href="#" className="block border-b-2 border-gray-700 pb-2 hover:text-red-500 transition duration-300 mt-2">Animation & Graphics</a>
+            </li>
+          </ul>
+        </div>
+        <div>
           <h3 className="text-lg font-semibold border-b-2 border-red-500 pb-2 mb-4">CONTACT US</h3>
           <p className="text-sm mb-2">
           Near FAZYO, Lal Bahadur Shastri Rd, Kottayam, Kerala 686001
