@@ -8,3 +8,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.text-ver{
+  writing-mode: sideways-rl;
+}

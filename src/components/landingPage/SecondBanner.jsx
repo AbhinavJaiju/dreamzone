@@ -12,7 +12,7 @@ const SecondBanner = () => {
       className="min-h-screen flex p-8 overflow-y-auto bg-cover bg-center bg-fixed"
       style={{ backgroundImage: `url(${bg})` }}
     >
-      <div className="w-1/3 flex flex-col space-y-8">
+      <div className="lg:w-1/3 md:w-full flex flex-col space-y-8">
         <motion.div
           className="w-full h-full bg-contain bg-no-repeat bg-center "
           style={{ backgroundImage: `url(${left1})` }}
@@ -30,7 +30,7 @@ const SecondBanner = () => {
       </div>
 
       {/* Second Column: Heading, Subtext, and Cards */}
-      <div className="w-2/3 pl-8">
+      <div className="lg:w-2/3 md:w-full pl-8">
         {/* Heading and Subtext */}
         <motion.h1
           className="text-4xl font-bold mb-4"
@@ -61,11 +61,11 @@ const SecondBanner = () => {
         </motion.p>
 
         {/* Cards */}
-        <div className="space-y-8">
+        <div className="md:space-y-8">
           {/* First Row: Two Cards */}
-          <div className="flex space-x-8">
+          <div className="md:flex md:space-x-8">
             <motion.div
-              className="w-1/2 bg-white rounded-lg shadow-lg p-6"
+              className="lg:w-1/2 md:w-full bg-white rounded-lg shadow-lg p-6"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
@@ -86,7 +86,7 @@ const SecondBanner = () => {
               </p>
             </motion.div>
             <motion.div
-              className="w-1/2 bg-white rounded-lg shadow-lg p-6"
+              className="lg:w-1/2 md:w-full bg-white rounded-lg shadow-lg p-6"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}

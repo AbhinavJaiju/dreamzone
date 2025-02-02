@@ -13,9 +13,6 @@ const LandingWA = () => {
 
   return (
     <>
-      <nav className="bg-white shadow-md p-4">
-        {/* Your existing navbar content */}
-      </nav>
 
       {/* WhatsApp Button */}
       <div className="fixed bottom-6 left-6 z-50">

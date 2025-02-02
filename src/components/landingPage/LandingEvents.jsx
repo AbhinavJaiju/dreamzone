@@ -31,7 +31,7 @@ const LandingEvents = () => {
         {/* Event Card */}
         {[
           {
-            title: "LIGHTZAP - ANNUAL DESIGN CONTEST",
+            title: "LightZap - Annual Design Contest",
             iFrame: "https://www.youtube.com/embed/8epkshMNDUw",
             link: "#lightzap",
             content:
