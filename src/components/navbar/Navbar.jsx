@@ -8,11 +8,13 @@ const Navbar = () => {
     <nav className="bg-white-900 p-4">
       <div className="container mx-auto flex flex-wrap justify-center sm:justify-start space-x-4 sm:space-x-8 pl-4">
         <div className="w-1/3 sm:w-auto flex justify-center sm:justify-start mb-4 sm:mb-0">
+        <a href='/'>
           <img
             src={firstLogo}
             alt="Logo 1"
             className="h-16 sm:h-20 w-auto"
           />
+          </a>
         </div>
         {/* <div className="w-1/3 sm:w-auto flex justify-center sm:justify-start mb-4 sm:mb-0">
           <img

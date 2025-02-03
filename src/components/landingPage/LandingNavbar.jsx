@@ -12,7 +12,9 @@ const LandingNavbar = () => {
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo Section */}
         <div className="flex space-x-6 pl-4">
+          <a href="/">
           <img src={firstLogo} alt="Logo 1" className="h-12 w-auto" />
+          </a>
         </div>
 
         {/* Desktop Navigation */}
