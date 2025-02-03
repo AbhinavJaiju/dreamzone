@@ -17,38 +17,11 @@ const LandingNavbar = () => {
 
         {/* Desktop Navigation */}
         <ul className="hidden md:flex items-center space-x-6 text-gray-800 font-semibold">
-          <li>
-            <a href="#" className="px-3 py-2 hover:text-white hover:bg-red-500 rounded-md transition">
-              Home
-            </a>
-          </li>
-
-          {/* Courses Dropdown */}
-          <li className="relative group">
-            <a href="#" className="px-3 py-2 hover:text-white hover:bg-red-500 rounded-md transition">
-              Courses
-            </a>
-            <div className="absolute left-0 mt-2 w-48 bg-white border border-gray-200 shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-300 delay-100 z-50">
-              <a href="#" className="block px-4 py-2 hover:bg-red-500 hover:text-white rounded-t-md">
-                Fashion Design
-              </a>
-              <a href="#" className="block px-4 py-2 hover:bg-red-500 hover:text-white">
-                Interior Design
-              </a>
-              <a href="#" className="block px-4 py-2 hover:bg-red-500 hover:text-white">
-                Animation & Graphics
-              </a>
-              <a href="#" className="block px-4 py-2 hover:bg-red-500 hover:text-white rounded-b-md">
-                Photography
-              </a>
-            </div>
-          </li>
-
 
           {/* Contact Us Button */}
           <li>
-            <a href="/contact" className="px-6 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 transition whitespace-nowrap">
-              Contact Us
+            <a href="/contact" className="px-6 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition whitespace-nowrap">
+              Enquire Us
             </a>
           </li>
         </ul>
@@ -76,41 +49,11 @@ const LandingNavbar = () => {
 
             {/* Mobile Nav Items */}
             <ul className="mt-12 space-y-6 text-lg font-semibold">
-              <li>
-                <a href="#" className="block px-3 py-2 hover:text-white hover:bg-red-500 rounded-md transition">
-                  Home
-                </a>
-              </li>
-
-              {/* Courses Dropdown in Mobile */}
-              <li>
-                <button
-                  onClick={() => setIsCoursesOpen(!isCoursesOpen)}
-                  className="block px-3 py-2 hover:text-white hover:bg-red-500 rounded-md transition w-full text-left"
-                >
-                  Courses
-                </button>
-                {isCoursesOpen && (
-                  <div className="ml-4 mt-2 space-y-2">
-                    <a href="#" className="block px-3 py-2 hover:bg-red-500 hover:text-white rounded-md">
-                      Fashion Design
-                    </a>
-                    <a href="#" className="block px-3 py-2 hover:bg-red-500 hover:text-white rounded-md">
-                      Interior Design
-                    </a>
-                    <a href="#" className="block px-3 py-2 hover:bg-red-500 hover:text-white rounded-md">
-                      Animation & Graphics
-                    </a>
-                    <a href="#" className="block px-3 py-2 hover:bg-red-500 hover:text-white rounded-md">
-                      Photography
-                    </a>
-                  </div>
-                )}
-              </li>
+              
 
               {/* Contact Us Button */}
               <li>
-                <a href="/contact" className="block px-6 py-3 bg-red-500 text-white rounded-md hover:bg-red-600 transition">
+                <a href="/contact" className="block px-6 py-3 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition">
                   Contact Us
                 </a>
               </li>

@@ -17,7 +17,7 @@ const LandingEvents = () => {
       <div className="w-full text-center">
         <a
           href="#"
-          className="text-red-700 font-bold text-lg transition-colors duration-300 hover:text-black"
+          className="text-blue-700 font-bold text-lg transition-colors duration-300 hover:text-black"
         >
           EVENTS
         </a>
@@ -74,7 +74,7 @@ const LandingEvents = () => {
             <div className="p-4 flex-grow">
               <motion.a
                 href={event.link}
-                className="text-red-600 font-bold text-lg transition-colors duration-300 hover:text-black block mb-4"
+                className="text-blue-600 font-bold text-lg transition-colors duration-300 hover:text-black block mb-4"
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -83,7 +83,7 @@ const LandingEvents = () => {
               </motion.a>
               <a
                 href={event.link}
-                className="text-gray-700 transition-colors duration-300 hover:text-red-600 block"
+                className="text-gray-700 transition-colors duration-300 hover:text-blue-600 block"
               >
                 {event.content}
               </a>
@@ -92,7 +92,7 @@ const LandingEvents = () => {
             <div className="p-4 flex-shrink-0">
               <a
                 href={event.link}
-                className="text-red-600 font-bold hover:underline transition-colors duration-300 hover:text-black"
+                className="text-blue-600 font-bold hover:underline transition-colors duration-300 hover:text-black"
               >
                 Read More
               </a>

@@ -29,9 +29,9 @@ const HeroImage = () => {
     e.preventDefault();
 
     const data = {
-      service_id: 'service_0aapx05', // Replace with your service ID
-      template_id: 'template_pml246k', // Replace with your template ID
-      user_id: '0i1KgGg7cnQPaREia', // Replace with your public key
+      service_id: 'service_s307akn', // Replace with your service ID
+      template_id: 'template_pu09p3u', // Replace with your template ID
+      user_id: 'g5ureZ6yfN45OjC3q', // Replace with your public key
       template_params: {
         name: formData.name,
         phoneNumber: formData.phone,
@@ -69,7 +69,7 @@ const HeroImage = () => {
     >
       <div className="flex flex-col md:flex-row justify-center items-center gap-10 w-full max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-5xl xl:max-w-7xl">
         <div className="text-center md:text-left max-w-lg">
-          <h2 className="text-white text-3xl md:text-5xl font-extrabold leading-tight">
+          <h2 className="text-gray-200 text-3xl md:text-5xl font-extrabold leading-tight">
             Let's Learn from Experienced Professionals
           </h2>
         </div>
@@ -131,7 +131,7 @@ const HeroImage = () => {
 
             <button
               type="submit"
-              className={`w-full py-3 rounded-lg font-medium transition mx-auto ${isFormValid ? 'bg-red-500 text-white hover:bg-red-600' : 'bg-gray-300 text-gray-600 cursor-not-allowed'}`}
+              className={`w-full py-3 rounded-lg font-medium transition mx-auto ${isFormValid ? 'bg-blue-500 text-white hover:bg-blue-600' : 'bg-gray-300 text-gray-600 cursor-not-allowed'}`}
               disabled={!isFormValid}
             >
               Submit

@@ -41,7 +41,7 @@ const SecondBanner = () => {
           About DreamZone®
         </motion.h1>
         <motion.p
-          className="text-red-600 font-bold text-center md:text-left mb-4"
+          className="text-blue-600 font-bold text-center md:text-left mb-4"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
