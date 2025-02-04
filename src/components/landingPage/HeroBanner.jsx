@@ -1,5 +1,5 @@
 import React from "react";
-import bg2 from "../../assets/bg2.jpg";
+import bg2 from "../../assets/bg4.jpg";
 
 const HeroBanner = () => {
   return (
@@ -14,10 +14,10 @@ const HeroBanner = () => {
 
         {/* Text */}
         <div className="max-w-lg z-20">
-          <h2 className="text-white text-3xl md:text-5xl font-extrabold leading-tight mb-2">
+          <h2 className="text-gray-100 text-4xl md:text-5xl font-extrabold leading-tight mb-2">
             DREAM ZONE School Of Creative Studies
           </h2>
-          <p className="text-white font-bold">
+          <p className="text-white font-bold text-xl">
             DreamZone is a creative skill development initiative of CADD Centre
             Training Services Private Limited, a diversified global network of
             creative, engineering and management skill development institutes.

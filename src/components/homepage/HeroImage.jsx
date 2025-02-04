@@ -2,8 +2,10 @@ import React, { useRef, useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import bg from "../../assets/bg.jpg";
+import { useNavigate } from 'react-router-dom';
 
 const HeroImage = () => {
+  const navigate = useNavigate();
   const form = useRef();
   const [formData, setFormData] = useState({
     name: '',
@@ -50,9 +52,11 @@ const HeroImage = () => {
       });
 
       if (response.ok) {
-        toast.success('Your message has been sent successfully!');
+        toast.success('Your message has been sent successfully! Navigating back to home');
         setFormData({ name: '', phone: '', email: '', course: '' }); // Reset form data
         form.current.reset(); // Reset the form
+        setTimeout(()=>navigate('/'), 2000)
+        
       } else {
         throw new Error('Failed to send the message');
       }
@@ -98,6 +102,7 @@ const HeroImage = () => {
                 placeholder="Enter your phone number"
                 value={formData.phone}
                 onChange={handleInputChange}
+                maxLength="10"
                 className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>

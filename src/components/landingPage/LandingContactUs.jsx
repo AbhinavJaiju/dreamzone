@@ -1,8 +1,10 @@
 import React, { useRef, useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate } from "react-router";
 
 const LandingContactUs = () => {
+  const navigate = useNavigate();
   const form = useRef();
 
   // State to store form data
@@ -54,6 +56,7 @@ const LandingContactUs = () => {
         toast.success('Your message has been sent successfully!');
         setFormData({ name: '', phone: '', email: '', course: '' }); // Reset form data
         form.current.reset(); // Reset the form
+        setTimeout(()=>navigate("/"),2000)
       } else {
         throw new Error('Failed to send the message');
       }
@@ -98,6 +101,7 @@ const LandingContactUs = () => {
                 type="tel"
                 name="phone"
                 placeholder="Enter your phone number"
+                maxLength="10"
                 value={formData.phone}
                 onChange={handleInputChange}
                 className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
