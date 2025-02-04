@@ -1,9 +1,10 @@
 import React from 'react';
+import map from '../../assets/map.jpeg';
 
 const Footer = () => {
   return (
     <footer className="bg-gray-800 text-white py-10">
-      <div className="max-w-screen-xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-10">
+      <div className="max-w-screen-xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
         <div>
           <h3 className="text-lg font-semibold border-b-2 border-blue-500 pb-2 mb-4">
             DREAMZONE - SCHOOL OF CREATIVE STUDIES
@@ -11,6 +12,16 @@ const Footer = () => {
           <p className="text-sm mb-4">
             DreamZone is a creative skill development initiative of CADD Centre Training Services Private Limited, a diversified global network of creative, engineering, and management skill development institutes.
           </p>
+        </div>
+        <div>
+          <h3 className="text-lg font-semibold border-b-2 border-blue-500 pb-2 mb-4">MAP</h3>
+          <ul>
+            <li>
+              <a href="https://maps.app.goo.gl/h5D2oPesVxUkDAkcA" target='_blank' className="block border-b-2 border-gray-700 pb-2 hover:text-blue-500 transition duration-300 mt-2">
+              <img  src={map} className='rounded-lg' alt='mapImage'/></a>
+            </li>
+            
+          </ul>
         </div>
         {/* <div>
           <h3 className="text-lg font-semibold border-b-2 border-blue-500 pb-2 mb-4">USEFUL LINKS</h3>
